@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ica-aroma"
+version = "0.3b0"
+description = "ICA-based Automatic Removal Of Motion Artifacts for fMRI data"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "license.md" }
+authors = [
+  { name = "ICA-AROMA developers" }
+]
+dependencies = [
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "seaborn",
+]
+
+[project.scripts]
+ica-aroma = "ica_aroma.cli:main"
+ica-aroma-classification-plot = "ica_aroma.plots:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["ica_aroma*"]
+
+[tool.setuptools.package-data]
+ica_aroma = ["*.nii.gz"]

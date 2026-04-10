@@ -1,5 +1,9 @@
 # ICA-AROMA
-ICA-AROMA (i.e. ‘ICA-based Automatic Removal Of Motion Artifacts’) concerns a data-driven method to identify and remove motion-related independent components from fMRI data. To that end it exploits a small, but robust set of theoretically motivated features, preventing the need for classifier re-training and therefore providing direct and easy applicability. This package requires an installation of Python and FSL. Read the provided 'Manual.pdf' for a description on how to run ICA-AROMA. Make sure to first install all required python packages: `python -m pip install -r requirements.txt`.
+ICA-AROMA (i.e. ‘ICA-based Automatic Removal Of Motion Artifacts’) concerns a data-driven method to identify and remove motion-related independent components from fMRI data. To that end it exploits a small, but robust set of theoretically motivated features, preventing the need for classifier re-training and therefore providing direct and easy applicability. This package requires an installation of Python and FSL. Read the provided 'Manual.pdf' for a description on how to run ICA-AROMA.
+
+Install it as a package from the repository root with `python -m pip install .` or `python -m pip install -e .` for an editable install. This exposes the `ica-aroma` and `ica-aroma-classification-plot` commands.
+
+If you prefer a manual dependency install without packaging, `python -m pip install -r requirements.txt` still works.
 
 **NOTE**: python2.7 is no longer supported as it is not compatible with the required packages anymore.
 
